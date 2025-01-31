@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home_page from "./components/home_page";
-import Questions_page from "./components/questions_page";
+import Questions_page from "./components/questions_page.jsx";
 
 function App() {
   return (
