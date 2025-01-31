@@ -5,7 +5,7 @@ function Questions_page() {
   const [Data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/data")
+    fetch("https://quiz-website-irvh.onrender.com/api/data")
       .then((response) => response.json())
       .then((data) => {
         setData(data.questions);
