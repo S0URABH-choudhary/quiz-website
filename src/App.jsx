@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home_page from "./components/home_page.jsx";
-import Questions_page from "./components/questions_page.jsx";
+import Homepage from "./components/Homepage.jsx";
+import Questionspage from "./components/questionspage.jsx";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home_page />} />
-        <Route path="/quiz" element={<Questions_page />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/quiz" element={<Questionspage />} />
       </Routes>
     </Router>
   );

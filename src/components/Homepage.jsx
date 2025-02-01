@@ -17,4 +17,4 @@ function Home_page() {
   )
 }
 
-export default Home_page
+export default Home_page;

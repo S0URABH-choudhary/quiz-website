@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function Questions(props) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [details, setDetails] = useState(false);
-  const [marks, setmarks] = useState();
 
   const handleOptionClick = (option) => {
     if (!selectedOption) {
