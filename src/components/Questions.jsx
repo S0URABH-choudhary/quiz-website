@@ -17,8 +17,8 @@ function Questions(props) {
 
   return (
     <>
-      <div className="questions-container mt-28 last:mb-28 h-[80vh] w-[60%] shadow-xl bg-white rounded-[30px] gap-2 overflow-hidden flex flex-col items-center">
-        <div className="question-container-top relative mt-[40px] flex flex-col items-center justify-center w-[70%] h-[25%] border-1 rounded-[20px] border-blue-500">
+      <div className="questions-container max-md:w-[95%] max-md:h-[100vh] max-md:mt-[20px] mt-28 last:mb-28 h-[80vh] w-[60%] shadow-xl bg-white rounded-[30px] gap-2 overflow-hidden flex flex-col items-center">
+        <div className="question-container-top max-md:w-[95%] max-md:h-[30%] relative mt-[40px] flex flex-col items-center justify-center w-[70%] h-[25%] border-1 rounded-[20px] border-blue-500">
           <div className="topic px-[15px] py-[5px] absolute top-[-15%] rounded-[20px] bg-blue-600 text-white">
             {props.topic}
           </div>
@@ -26,7 +26,7 @@ function Questions(props) {
             {props.index + 1}. {props.description}
           </div>
         </div>
-        <div className="question-container-bottom w-[70%] h-[25%] grid grid-cols-2 gap-2">
+        <div className="question-container-bottom max-md:w-[95%] w-[70%] h-[25%] grid grid-cols-2 gap-2">
           {props.options.map((option, index) => (
             <div
               key={option.id} 
