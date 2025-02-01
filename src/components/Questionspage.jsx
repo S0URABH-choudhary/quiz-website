@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Questions from "./questions";
 import Result from "./Result";
 
-function Questions_page() {
+function Questionspage() {
   const [Data, setData] = useState([]);
   const [resultpage, setresultpage] = useState(false)
   const handleresult = () => {
@@ -40,4 +40,4 @@ console.log(Data);
   );
 }
 
-export default Questions_page;
+export default Questionspage;
