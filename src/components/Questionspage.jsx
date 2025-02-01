@@ -4,7 +4,8 @@ import Result from "./Result";
 
 function Questionspage() {
   const [Data, setData] = useState([]);
-  const [resultpage, setresultpage] = useState(false)
+  const [resultpage, setresultpage] = useState(false);
+  const [loading, setloading] = useState(true);
   const handleresult = () => {
     setresultpage(true)
   }
@@ -14,6 +15,7 @@ function Questionspage() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.questions);
+        setloading(false);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
@@ -24,7 +26,7 @@ console.log(Data);
     
       {resultpage? <Result/>:""}
     <div className="relative max-w-screen min-h-screen  bg-gray-100 flex flex-col items-center justify-center">
-     {Data.map((question,index) => (
+    {loading? <h1>Loading...</h1>: <>{ Data.map((question,index) => (
             <Questions
               index={index}
               key={question.id}
@@ -33,7 +35,7 @@ console.log(Data);
               options={question.options}
               detailed_solution={question.detailed_solution}
             />
-          ))}
+          ))}</>}
       <button aria-label='start quiz' className='cursor-pointer border-[1px] bg-blue-600 m-8 text-white rounded-[10px] px-5 py-2' onClick={handleresult} >Submit</button>
     </div>
 </>
